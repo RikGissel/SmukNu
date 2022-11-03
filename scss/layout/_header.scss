@@ -1,0 +1,56 @@
+/* code for component styling */
+.header-container {
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 20px 13px;
+    box-shadow: 0px 10px 31px -3px rgba(0,0,0,0.75);
+    background-color: $white-color;
+
+    img {
+        width: 148px;
+    }
+
+    .nav-cart-wrapper {
+        i:not(:last-child){
+            color: $pink-color;
+            padding-right: 10px;
+        }
+    }
+
+}
+
+#list-items-wrapper {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: $txt-size;
+    font-family: $font-family;
+    font-weight: bold;
+    background: $transparent-color;
+    height: 220px;
+    width: 100%;
+    padding: 15px 15px 33px 15px;
+    border-radius: 0px 0px 15px 15px;
+
+    a {
+        color: $white-color;
+        text-decoration: none;
+        transition: 0.5s ease;
+
+        &:hover {
+            color: $pink-color;
+        }
+    }
+  }
+
+  .icon {
+    color: $pink-color;
+  }
+}

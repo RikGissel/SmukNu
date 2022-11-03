@@ -1,0 +1,30 @@
+/* footer component styling */
+footer {
+    @include flex-center-column;
+    background-color: $grey-color;
+    width: 100%;
+    padding: 30px;
+    height: auto;
+    font-family: $font-family;
+
+    .footer-social-icons {
+        @include flex-center;
+        flex-wrap: wrap;
+    i {
+        color: $white-color;
+        padding: 15px;
+        transition: 1s ease;
+        
+        &:hover {
+            color: $pink-color;
+        }
+    }
+    }
+
+    .footer-contact-txt {
+        a {
+            text-decoration: none;
+            color: $black-color;
+        }
+    }
+}

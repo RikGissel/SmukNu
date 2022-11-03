@@ -1,0 +1,113 @@
+/* health container styling */
+.health-container {
+    @include flex-center;
+    @include cover-background;
+    height: 725px;
+    width: 100%;
+    background-image: url(../assets/headers/abouthealth.jpg);
+
+.health-wrapper {
+    @include flex-center-column;
+    color: $white-color;
+    font-family: $font-family;
+    background-color: $pink-color;
+    padding: 35px 0;
+    margin: 0 30px;
+    animation: wrapperFadeDown 1s ease-in-out;
+    animation-delay: 2s;
+
+    @keyframes wrapperFadeDown {
+        from {
+            opacity: 0;
+            transform: translateY(-200px);
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: $large-font;
+    }
+
+    p {
+        width: 50%;
+        text-align: center;
+        font-size: $txt-size;
+    }
+}
+}
+
+/* accordions container styling */
+.accordions-container {
+    font-family: $font-family;
+	padding: 2rem;
+}
+
+/* wrappe styling */
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+
+	&__title {
+		font-size: 2rem;
+	}
+}
+
+/* accordions section styling */
+.accordion {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 1rem;
+
+	&__item {
+		padding: 1rem;
+        border-bottom: 1px solid $pink-color;
+        border-top: 1px solid $pink-color;
+		position: relative;
+		width: 100%;
+		cursor: pointer;
+
+        h3 {
+            font-weight: 500;
+        }
+
+		&:after {
+			position: absolute;
+			right: 1rem;
+			font-size: 24px;
+			top: 1rem;
+		}
+
+		&.open h3 i{
+            color: $pink-color;
+		}
+
+		p {
+			margin-top: 1rem;
+		}
+
+		&:not(.open) p {
+			display: none;
+		}
+	}
+}
+
+/* code for media queries */
+@media (max-width: $sm-breakpoint) {
+    .health-wrapper {
+        h1 {
+            font-size: $heading-size_2 !important;
+        }
+    }
+}
+
+@media (min-width: $md-breakpoint) {
+    .accordion__item {
+        text-align: center;
+    }
+}

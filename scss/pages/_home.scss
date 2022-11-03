@@ -1,0 +1,249 @@
+/* class to stop scrolling on body temporarily */
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* top hero wrapper styling */
+.top-hero-wrapper {
+    @include cover-background;
+    @include flex-center-vertical;
+    background-image: url(../assets/headers/front.jpg);
+    height: 670px;
+    width: 100%;
+    font-family: $font-family;
+
+    .top-hero-content {
+        width: 100%;
+        height: auto;
+        background-color: $sand-color;
+        padding: 60px 30px;
+        text-align: center;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: $heading-size;
+        }
+
+        p {
+            padding: 15px 0;
+        }
+
+        button {
+            width: 50%;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0px 3px 6px #00000029;
+            font-weight: bold;
+            font-size: $txt-size;
+            color: $white-color;
+            font-family: $font-family;
+            background-color: $pink-color;
+            cursor: pointer;
+        }
+    }
+}
+
+/* products section styling */
+.products-pictures__container {
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+    height: auto;
+    @include flex-center-column;
+
+    .product__holder {
+        @include flex-column;
+        width: 320px;
+        font-family: $font-family;
+        margin: 30px;
+        box-shadow: 0 10px 12px -2px $dark-grey;
+        border-radius: 15px;
+        cursor: pointer;
+
+        &:hover .buy-button {
+            opacity: 1;
+        }
+
+        .price-tag {
+            position: relative;
+
+            .special-discount {
+                right: 15px;
+                bottom: 15px;
+                position: absolute;
+                background-color: $pink-color;
+                width: 100px;
+                height: 60px;
+                border-radius: 15px;
+                @include flex-center;
+                font-size: $txt-size_2;
+                color: $white-color;
+                font-weight: bold;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+                border-bottom: 2px solid $pink-color;
+            }
+        }
+
+    }
+
+    .heading-wrapper {
+        @include flex-column;
+        justify-content: center;
+        height: 100%;
+        padding: 15px;
+        position: relative;
+
+        .buy-button {
+            opacity: 0;
+            transition: 0.5s ease;
+            text-transform: uppercase;
+            position: absolute;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            width: 6.5rem;
+            height: 1.8rem;
+            right: 10px;
+            bottom: 15px;
+            border-radius: 30px;
+            color: $white-color;
+            background-color: $black-color;
+            font-family: $font-family;
+            font-size: $txt-size;
+        }
+    }
+}
+
+/* reviews title styling */
+.reviews-title {
+    font-size: $heading-size;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $font-family;
+    margin: 30px 0;
+
+    span {
+        color: $pink-color;
+    }
+}
+
+/* customer reviews styling */
+.customer-reviews {
+    font-family: $font-family;
+    text-align: center;
+    padding: 30px;
+    height: auto;
+
+    .client-review {
+        border-radius: 50%;
+        border: 10px solid $pink-color;
+        margin: 35px 0;
+    }
+
+    p {
+        font-size: $txt-size_2;
+        color: $dark-grey;
+    }
+
+    .byline {
+        margin: 25px 0;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    hr {
+        border: 1px solid $pink-color;
+    }
+}
+
+/* code for media queries */
+@media (max-width: $xs-breakpoint) {
+
+    .product__holder {
+        margin: 25px 0 !important;
+        width: 100% !important;
+    }
+
+    .top-hero-content h1 {
+        font-size: $heading-size_2 !important;
+    }
+
+    .reviews-title {
+        font-size: $heading-size_2;
+    }
+
+    .customer-club h1 {
+        font-size: $heading-size_2;
+    }
+}
+
+@media (min-width: $md-breakpoint) {
+    .products-pictures__container {
+        flex-direction: row;
+
+        .product__holder {
+            height: 425px;
+        }
+    }
+
+    .customer-reviews {
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(3, auto);
+        width: 100%;
+
+        .byline {
+            grid-row-start: 2;
+            grid-column-start: 1;
+            justify-self: center;
+            margin: 0px !important;
+        }
+
+        .client-review {
+            margin: 20px !important;
+            grid-row-start: 1;
+            align-self: flex-end;
+        }
+
+        hr {
+            display: none;
+        }
+
+        .testimonial {
+            align-self: center;
+            justify-self: center;
+        }
+    }
+
+    .kathrine {
+        border-top: 2px solid $pink-color;
+
+        img {
+            grid-column-start: 2;
+            align-self: flex-end;
+        }
+
+        .byline {
+            grid-column-start: 2;
+        }
+    }
+
+}
+
+@media (max-width: $md-breakpoint) {
+    .top-hero-content button {
+        width: 100% !important;
+    }
+}
+
+.reviewGrid {
+    grid-column-start: 3 !important;
+    grid-row-start: 3;
+}

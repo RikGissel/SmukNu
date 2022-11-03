@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="shortcut icon" href="../assets/logo/smuknu_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Medlem</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- code for header / navbar -->
+    <div id="header"></div>
+    <div style="height: 80px;"></div>
+
+    <!-- page loader -->
+    <div class="page-loader-wrapper">
+        <span class="page-loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <!-- members signup container -->
+
+    <section class="members-signup__container">
+        <div class="members-signup__information">
+            <h2>Bliv<br> medlem</h2>
+            <p>Opret dig som medlem og få flere fordele og nyheder I det øjeblik vi har dem.<br><br> Send gerne ris eller ros med når du melder dig ind, vi er altid parate til dialog.</p>
+        </div>
+    </section>
+
+    <!-- form section for members page -->
+    <form class="form__container">
+        <h2>Fulde navn</h2>
+        <input id="input-text-field" type="text" name="name" required>
+        <h2>E-mail</h2>
+        <input id="input-email-field" type="email" name="email" required>
+        <h2>Ris og/ eller ros</h2>
+        <textarea rows="15" name="message"></textarea>
+        <button value="submit" type="submit">Opret</button>
+        <div id="message-authentication">
+            <h1 class="caution">Tak!</h1>
+            <h2 class="success-heading">For din besked.</h2>
+            <div class="gift-contents">
+                <img class="gift" src="https://smuknu.webmcdm.dk/products/product_8281992819.jpg" alt="photo">
+                <p class="gift" style="font-size: 22px;">Vi er enormt glade for at få dig<br> som medlem.</p>
+                <p class="gift" style="font-size: 18px;">Kig I din inbox vi har sendt<br> en lille velkomst gave.</p>
+            </div>
+            <div id="loading-content"></div>
+        </div>
+    </form>
+
+    <!-- code for footer -->
+    <div id="footer"></div>
+    
+    <!-- import script links -->
+    <script src="../js/script.js"></script>
+    <script src="../js/API/POST-api.js"></script>
+    <script type="text/javascript" src="../js/components/header.js"></script>
+    <script type="text/javascript" src="../js/components/footer.js"></script>
+</body>
+</html>

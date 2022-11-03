@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/logo/smuknu_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Forside</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- code for header / navbar -->
+    <div id="header">
+        <div class="header-container">
+            <header>
+                <div class="header__img">
+                    <a href="index.html"><img src="assets/logo/smuknu_logo.png" alt="official logo" /></a>
+                </div>
+
+                <div class="nav-cart-wrapper">
+                <i class="fa-solid fa-bag-shopping fa-2x"></i>
+                <a href="javascript:void(0);" class="icon" onclick="showNav()">
+                    <i class="fa fa-bars fa-2x"></i>
+                </a>
+            </div>
+
+            </header>
+            <ul id="list-items-wrapper">
+                <a href="index.html">Forsiden</a>
+                <a href="html/products.html" style="padding: 27px 0;">Vores produkter</a>
+                <a href="html/health.html" style="padding-bottom: 27px;">Spørg om sundhed</a>
+                <a href="html/member.html">Bliv medlem</a>
+            </ul>
+        </div>
+    </div>
+    <div style="height: 80px;"></div>
+
+    <!-- page loader -->
+    <div class="page-loader-wrapper">
+        <span class="page-loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <!-- code for index hero content -->
+    <section class="top-hero-wrapper">
+        <div class="top-hero-content">
+            <h1>Skønhed for alle</h1>
+            <p>Alt hvad du behøver...<br>SMUK NU</p>
+            <a href="html/products.html"><button>Se udvalgte produkter</button></a>
+        </div>
+    </section>
+
+    <section class="products-pictures__container"></section>
+
+    <!-- index customer reviews section -->
+    <h1 class="reviews-title"><span>Skønheder</span> udtaler</h1>
+    <section class="reviews-section-container"></section>
+
+    <div id="customers-section">
+        <div class="customer-club">
+            <div class="customer-club-text">
+                <h1>Medlem?</h1>
+                <p>Vær med i kundeklubben for nye videoer, rabatkoder og mere!</p>
+                <a href="html/member.html"><button>Bliv medlem af kundeklubben</button></a>
+            </div>
+            <div class="customer-club-images">
+                <img src="https://smuknu.webmcdm.dk/reviews/michelle_donnersen.jpg" alt="customer portrait">
+                <img src="https://smuknu.webmcdm.dk/reviews/phoebe_larsen.jpg" alt="customer portrait">
+                <img src="https://smuknu.webmcdm.dk/reviews/kathrine_udgaard.jpg" alt="customer portrait">
+                <img src="https://smuknu.webmcdm.dk/reviews/mary_petersen.jpg" alt="customer portrait">
+            </div>
+            </div>
+    </div>
+
+    <!-- code for footer -->
+    <div id="footer">
+        <footer>
+            <div class="footer-social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                <a href="https://www.pinterest.dk/" target="_blank"><i class="fa-brands fa-pinterest fa-2x"></i></a>
+                <a href="https://twitter.com/?lang=da" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube fa-2x"></i></a>
+            </div>
+            <div class="footer-contact-txt">
+                <a href="mailto:mail@smuk.nu">
+                    <p>mail@smuk.nu</p>
+                </a>
+                <a href="tel:+45 123 345 33">
+                    <p>+45 123 345 33</p>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- import script links -->
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/API/index-api.js"></script>
+    <script type="text/javascript" src="js/API/reviews-api.js"></script>
+</body>
+
+</html>
